@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<h3>Enter a New Run</h3>
+<form action="/runs" method="POST" autocomplete="off">
+    <label>Title:
+        <input type="text" name="title">
+    </lable><br>
+    <label>Distance:
+        <input type="number" name="distance">
+    </label><br>
+    <lable>Duration:
+        <input type="number" name="hours">
+        <input type="number" name="minutes">
+        <input type="number" name="seconds">
+    </lable><br>
+    <lable>Location:
+        <input type="text" name="location">
+    </lable><br>
+    <button type="submit">Save a Run</button>
+</form>
+
+<%- include('../partials/footer') %>

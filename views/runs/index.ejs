@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h2>Runs</h2>
+
+<a href="/runs/new">Add a Run</a>
+
+<!-- <ul>
+    <% runs.forEach(function(run) { %>
+        <li>
+            <form action="/runs/<%= run.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/runs/<%= run.id %>">
+                <%= run.name %>
+            </a>
+        </li>
+        <% }); %>
+</ul> -->
+
+<%- include('../partials/footer') %>
