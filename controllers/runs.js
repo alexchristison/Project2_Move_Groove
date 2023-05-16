@@ -3,7 +3,7 @@ const Run = require('../models/run')
 
 // READ index 
 function index(req, res, next) {
-    Run.find({ user: req.user._id})
+    Run.find({ })
     .then(runs => {
         res.render('runs/index', {
             runs,
@@ -26,8 +26,21 @@ function create(req, res, next) {
     .catch(next)
 }
 
+//READ - show
+function show(req, res, next) {
+    run.findById(req.params.id)
+    .then(run => {
+        res.render('runs/show', {
+            Run,
+            title: 'Run Details'
+        })
+    })
+    .catch(next)
+}
+
 module.exports = {
     index,
     newRun,
-    create
+    create,
+    show
 }

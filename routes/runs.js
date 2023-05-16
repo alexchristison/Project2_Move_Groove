@@ -8,4 +8,6 @@ router.get('/', runCtrl.index)
 router.get('/new', runCtrl.newRun)
 router.post('/', runCtrl.create)
 
+router.get('/:id', runCtrl.show)
+
 module.exports = router
