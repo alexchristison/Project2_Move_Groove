@@ -59,12 +59,12 @@ function update(req, res, next) {
             // need to use .equals (not `===` which won't work here)
             console.log('this is run', run)
             console.log('this is user', req.user)
-            // if(!run.user.id.equals(req.user._id)) throw new Error('Unauthorized')
+            if(!run.user.equals(req.user._id)) throw new Error('Unauthorized')
             
             // if the user matches should update with updateOne method
             return run.updateOne(req.body)
         })
-        .then(() => res.redirect(`/runs/${req.params.id}`))
+        .then(() => {res.redirect(`/runs/${req.params.id}`)})
         .catch(next)
 }
 
