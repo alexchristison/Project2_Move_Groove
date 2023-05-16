@@ -3,7 +3,7 @@ const Run = require('../models/run')
 
 // READ index 
 function index(req, res, next) {
-    Run.find({ })
+    Run.find({ user: req.user._id})
     .then(runs => {
         res.render('runs/index', {
             runs,
@@ -31,7 +31,7 @@ function show(req, res, next) {
     Run.findById(req.params.id)
     .then(run => {
         res.render('runs/show', {
-            Run,
+            run,
             title: 'Run Details'
         })
     })
@@ -57,8 +57,10 @@ function update(req, res, next) {
     // if current signed in user doesn't own this run they shouldn't be able to update it
         .then(run => {
             // need to use .equals (not `===` which won't work here)
-            if(!run.user.equals(req.user._id)) throw new Error('Unauthorized')
-
+            console.log('this is run', run)
+            console.log('this is user', req.user)
+            // if(!run.user.id.equals(req.user._id)) throw new Error('Unauthorized')
+            
             // if the user matches should update with updateOne method
             return run.updateOne(req.body)
         })

@@ -1,7 +1,17 @@
 <%- include('../partials/header') %>
 
-<form action="/runs/<%= Run.id %>?_method=PUT" method="POST" autocomplete="off">
-    <input type="text" title="title" value="<%= run.title %>">
+<form action="/runs/<%= run.id %>?_method=PUT" method="POST" autocomplete="off">
+    <!-- <input type="text" title="title" name="title" value="<%= run.title %>"> -->
+    <section id="edit-page">
+        <div>Run Title:</div>
+        <input type="text" title="title" name="title" value="<%= run.title %>">
+        <div>Distance:</div>
+        <input type="text" title="distance" name="distance" value="<%= run.distance %>">
+        <div>Duration:</div>
+        <input type="text" title="duration" name="duration" value="<%= run.duration %>">
+        <div>Location:</div>
+        <input type="text" title="location" name="location" value="<%= run.location %>">
+    </section>
     <button type="submit">Update Run Information</button>
 </form>
 
