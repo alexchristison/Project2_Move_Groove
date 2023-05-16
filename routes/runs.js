@@ -9,5 +9,8 @@ router.get('/new', runCtrl.newRun)
 router.post('/', runCtrl.create)
 
 router.get('/:id', runCtrl.show)
+router.get('/:id/edit', runCtrl.updateRunForm)
+router.put('/:id', runCtrl.update)
+router.delete('/:id', runCtrl.deleteRun)
 
 module.exports = router

@@ -7,9 +7,9 @@
 <ul>
     <% runs.forEach(function(run) { %>
         <li>
-            <!-- <form action="/runs/<%= run.id %>? method="POST">
+            <form action="/runs/<%= run.id %>_method=DELETE? method="POST">
                 <button type="submit">X</button>
-            </form> -->
+            </form>
             <a href="/runs/<%= run._id %>">
                 <%= run.title %>
             </a>

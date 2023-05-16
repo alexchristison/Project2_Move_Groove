@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+
+<form action="/runs/<%= run.id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" title="title" value="<%= run.title %>">
+    <button type="submit">Update Run Information</button>
+</form>
+
+<%- include('../partials/footer') %>
