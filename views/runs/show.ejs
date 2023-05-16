@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
 <h3>
-    <%= run.title %>
+    <%= Run.title %>
 </h3>
 
 <section id="show-page">
     <div>Run Title:</div>
-    <div><%= run.title %></div>
+    <div><%= Run.title %></div>
     <div>Distance:</div>
-    <div><%= run.distance %></div>
+    <div><%= Run.distance %></div>
     <div>Duration:</div>
-    <div><%= run.duration %></div>
+    <div><%= Run.duration %></div>
     <div>Location:</div>
-    <div><%= run.location %></div>
+    <div><%= Run.location %></div>
 </section>
 
-<a href="/runs/<%= run.id %>/edit">Edit</a>
+<a href="/runs/<%= Run.id %>/edit">Edit</a>
 
 <%- include('../partials/footer') %>

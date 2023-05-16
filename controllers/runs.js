@@ -28,7 +28,7 @@ function create(req, res, next) {
 
 //READ - show
 function show(req, res, next) {
-    run.findById(req.params.id)
+    Run.findById(req.params.id)
     .then(run => {
         res.render('runs/show', {
             Run,
@@ -42,7 +42,7 @@ function show(req, res, next) {
 function updateRunForm(req, res, next) {
     // find the run to update
     // then pass that run to correct view
-    run.findById(req.params.id)
+    Run.findById(req.params.id)
         .then(run => {
             res.render('runs/edit', {
                 run,
