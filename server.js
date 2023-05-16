@@ -10,6 +10,7 @@ const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
 const runRouter = require('./routes/runs')
+const musicRouter = require('./routes/music')
 
 const app = express()
 
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/runs', runRouter)
+app.use('/music', musicRouter)
 
 app.use(function (req, res, next) {
 	next(createError(404))
