@@ -13,19 +13,32 @@
 - to be able to edit the song/songs that I enter, so that I can fix an entry errors
 - to POTENTIALLY have ability to add notes to runs and/or music that I've entered
 
+#### Trello Board for Project Tracking: 
+- https://trello.com/b/LBHRiZr3/project-2-sei-alex-christion
+
 #### Sample Wire Frames: 
+
+a user adds a new run: 
 
 ![Image-1](https://i.imgur.com/FM1ube4.png)
 
+the new run is rendered: 
+
 ![Image-2](https://i.imgur.com/BNAU1wi.png)
+
+form to add new music as sub-element of a run: 
 
 ![Image-3](https://i.imgur.com/Tn3fOP5.png)
 
+run image rendered w/ music included
+
 ![Image-4](https://i.imgur.com/zGEWhl8.png)
 
-
+full link to Balsamic wires: https://balsamiq.cloud/sjh802t/ppd0jux/r03D8
 
 #### Preliminary ERD: 
+
+![Image-ERD](https://i.imgur.com/C5r4JSK.png)
 
 
 
