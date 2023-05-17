@@ -14,7 +14,7 @@ router.get('/:id/edit', runCtrl.updateRunForm)
 router.put('/:id', runCtrl.update)
 router.delete('/:id', runCtrl.deleteRun)
 
-// get route to display add songs to playlist page ('/runs/addSongs/:id)
+// get route to display 'add songs' to playlist page ('/runs/addSongs/:id)
 router.get('/:runId/addMusic', musicCtrl.newMusic);
 // get route needs a controller that displays one song and all the music 
 // put route to actually add songs to playlist (:runId/addSong/:musicId)
