@@ -1,5 +1,5 @@
-const run = require('../models/run')
-const Run = require('../models/run')
+const Run = require('../models/run');
+const Music = require('../models/music');
 
 // READ index 
 function index(req, res, next) {
@@ -29,13 +29,15 @@ function create(req, res, next) {
 //READ - show
 function show(req, res, next) {
     Run.findById(req.params.id)
-    .then(run => {
-        res.render('runs/show', {
-            run,
-            title: 'Run Details'
+        .populate('playlist') // Populate the playlist field with associated music entries
+        .exec()
+        .then((run) => {
+            res.render('runs/show', {
+                run,
+                title: 'Run Details'
+            });
         })
-    })
-    .catch(next)
+        .catch(next);
 }
 
 // render a form to update a run
@@ -80,6 +82,39 @@ function deleteRun(req, res, next) {
     .catch(next)
 }
 
+// Render the form to add songs to a run's playlist
+function newMusic(req, res) {
+    Run.findById(req.params.id)
+        .then((run) => {
+            res.render('runs/addMusic', {
+                run,
+                title: 'Add Music to Run Playlist'
+            });
+        })
+        .catch(next);
+}
+
+// Add a song to a run's playlist
+function addMusicToRun(req, res, next) {
+    console.log('addSongToPlaylist route triggered');
+    console.log('runId:', req.params.runId);
+    console.log('musicId:', req.params.musicId);
+    Promise.all([
+        Run.findById(req.params.runId),
+        Music.findById(req.params.musicId)
+    ])
+        .then(([run, music]) => {
+            console.log(run, music)
+            if (!run || !music) throw new Error('Run or Music entry not found');
+            run.playlist.push(music);
+            return run.save();
+        })
+        .then(() => {
+            res.redirect(`/runs/${req.params.runId}`);
+        })
+        .catch(next);
+}
+
 module.exports = {
     index,
     newRun,
@@ -87,5 +122,7 @@ module.exports = {
     show,
     updateRunForm,
     update,
-    deleteRun
+    deleteRun,
+    newMusic,
+    addMusicToRun
 }

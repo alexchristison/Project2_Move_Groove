@@ -13,6 +13,12 @@ const runSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'User'
     },
+    playlist: [{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Music'
+    }],
+
+
 }, {
     timestamps: true
 });

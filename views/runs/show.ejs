@@ -17,4 +17,18 @@
 
 <a href="/runs/<%= run.id %>/edit">Edit</a>
 
+<!-- Add the link to the form for adding music -->
+<a href="/runs/<%= run.id %>/addMusic">Add Music to Your Run</a>
+
+<section id="music-section">
+    <h4>Music Playlist:</h4>
+    <ul>
+        <% run.playlist.forEach(function(music) { %>
+            <li><%= music.title %></li>
+        <% }); %>
+    </ul>
+</section>
+
+<a href="/runs/<%= run.id %>/edit">Edit</a>
+
 <%- include('../partials/footer') %>

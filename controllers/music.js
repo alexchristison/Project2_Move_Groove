@@ -1,6 +1,5 @@
-const music = require('../models/music')
-const Music = require('../models/music')
-// const Run = require('../models/run')
+const Music = require('../models/music');
+const Run = require('../models/run');
 
 // READ index
 function index(req, res, next) {
@@ -21,10 +20,25 @@ function newMusic(req, res) {
 
 // CREATE
 function create(req, res, next) {
-    req.body.user = req.user._id
+    req.body.user = req.user._id;
     Music.create(req.body)
-    .then(() => res.redirect('/music'))
-    .catch(next)
+        .then((music) => {
+            if (req.params.runId) {
+                return Run.findById(req.params.runId)
+                    .then((run) => {
+                        if (!run) throw new Error('Run not found');
+                        run.playlist.push(music);
+                        console.log("playlist check??",run.playlist); // Log the playlist after pushing the music entry
+                        return run.save();
+                    })
+                    .then(() => {
+                        res.redirect(`/runs/${req.params.runId}`);
+                    });
+            } else {
+                res.redirect('/music');
+            }
+        })
+        .catch(next);
 }
 
 // READ - show
