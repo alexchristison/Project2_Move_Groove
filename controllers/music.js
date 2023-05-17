@@ -4,7 +4,7 @@ const Music = require('../models/music')
 
 // READ index
 function index(req, res, next) {
-    Music.find({ user: req.user._id})
+    Music.find({ })
     .then(music => {
         res.render('music/index', {
             music,

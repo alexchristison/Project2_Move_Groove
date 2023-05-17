@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h3>
+    <%= music.title %>
+</h3>
+
+<section id="show-page">
+    <div>Song:</div>
+    <div><%= music.title %></div>
+    <div>Artist:</div>
+    <div><%= artist.artist %></div>
+    <div>Genre:</div>
+    <div><%= music.genre %></div>
+</section>
+
+<a href="/music/<%= music.id %>/edit">Edit</a>
+
+<%- include('../partials/footer') %>
