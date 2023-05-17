@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h2>Music</h2>
+
+<a href="/music/new">Add Some Music</a>
+
+<ul>
+    <% music.forEach(function(music) { %>
+        <li>
+            <form action="/music/<%= music.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/music/<%= music._id %>">
+                <%= music.song %>
+            </a>
+        </li>
+        <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

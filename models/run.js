@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 // const Schema = mongoose.Schema;
 
-const musicSchema = require('./music');
+// const musicSchema = require('./music');
 
 const runSchema = new mongoose.Schema({
     title: String,
@@ -13,7 +13,6 @@ const runSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'User'
     },
-    music: [musicSchema]
 }, {
     timestamps: true
 });

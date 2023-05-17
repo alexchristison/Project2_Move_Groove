@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h3>Enter New Music</h3>
+<form action="/music" method="POST" autocomplete="off">
+    <label>Song:
+        <input type="text" name="song">
+    </lable><br>
+    <label>Artist:
+        <input type="text" name="artist">
+    </label><br>
+    <lable>Genre:
+        <input type="text" name="genre">
+    </lable><br>
+    <button type="submit">Save New Music</button>
+</form>
+
+<%- include('../partials/footer') %>

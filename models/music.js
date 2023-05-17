@@ -8,4 +8,4 @@ const musicSchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = musicSchema
+module.exports = mongoose.model('Music', musicSchema);
