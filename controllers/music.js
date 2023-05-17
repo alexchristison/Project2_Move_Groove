@@ -28,7 +28,7 @@ function create(req, res, next) {
 }
 
 // READ - show
-function show(req, rees, next) {
+function show(req, res, next) {
     // find a single music entry and render it to a page
     
     // in the params object there needs to be a key of id
@@ -63,7 +63,7 @@ function update(req, res, next) {
             // need to use .equals (not `===` which won't work here)
             console.log('this is music', music)
             console.log('this is user', req.user)
-            if(!music.user.equals(req.user._id)) throw new Error('Unauthorized')
+            // if(!music.user.equals(req.user._id)) throw new Error('Unauthorized')
             
             // if the user matches should update with updateOne method
             return music.updateOne(req.body)
