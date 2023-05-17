@@ -15,13 +15,13 @@
 
 #### Sample Wire Frames: 
 
-![Image] (https://i.imgur.com/GjWdF0s.png)
+![Image-1](https://i.imgur.com/FM1ube4.png)
 
-![Image] (https://i.imgur.com/17AvbbK.png)
+![Image-2](https://i.imgur.com/BNAU1wi.png)
 
-![Image] (https://i.imgur.com/GaKEl6Q.png)
+![Image-3](https://i.imgur.com/Tn3fOP5.png)
 
-![Image] (https://i.imgur.com/cZH2yb9.png)
+![Image-4](https://i.imgur.com/zGEWhl8.png)
 
 
 
