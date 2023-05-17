@@ -4,7 +4,7 @@ const Music = require('../models/music')
 
 // READ index
 function index(req, res, next) {
-    Music.find({ })
+    Music.find({user: req.user._id })
     .then(music => {
         res.render('music/index', {
             music,
@@ -63,7 +63,7 @@ function update(req, res, next) {
             // need to use .equals (not `===` which won't work here)
             console.log('this is music', music)
             console.log('this is user', req.user)
-            // if(!music.user.equals(req.user._id)) throw new Error('Unauthorized')
+            if(!music.user.equals(req.user._id)) throw new Error('Unauthorized')
             
             // if the user matches should update with updateOne method
             return music.updateOne(req.body)

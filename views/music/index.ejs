@@ -7,7 +7,7 @@
 <ul>
     <% music.forEach(function(music) { %>
         <li>
-            <form action="/music/<%= music.id %>? method="POST">
+            <form action="/music/<%= music.id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
             </form> 
             <a href="/music/<%= music._id %>">
