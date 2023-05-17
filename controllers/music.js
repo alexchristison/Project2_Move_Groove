@@ -49,7 +49,7 @@ function updateMusicForm(req, res, next) {
     Music.findById(req.params.id)
         .then(music => {
             res.render('music/edit', {
-                run,
+                music,
                 title: 'Music Edit Detail'
             })
         })

@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<form action="/music/<%= music.id %>?_method=PUT" method="POST" autocomplete="off">
+    <section id="edit-page">
+        <div>Song Title:</div>
+        <input type="text" title="song" name="song" value="<%= music.song %>">
+        <div>Artist:</div>
+        <input type="text" title="artist" name="artist" value="<%= music.artist %>">
+        <div>Genre:</div>
+        <input type="text" title="genre" name="genre" value="<%= music.genre %>">
+    </section>
+    <button type="submit">Update Music Information</button>
+</form>
+
+<%- include('../partials/footer') %>
