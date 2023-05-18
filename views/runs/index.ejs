@@ -1,3 +1,5 @@
+<%- include('../partials/header') %>
+
 <h2>Runs</h2>
 
 <a href="/runs/new">Add a Run</a>
@@ -6,29 +8,14 @@
     <ul>
         <% runs.forEach(function(run) { %>
             <li>
-                <div class="run-item">
-                    <a href="/runs/<%= run._id %>">
-                        <%= run.title %>
-                    </a>
-                    <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="delete-button">Delete Run</button>
-                    </form>
-                </div>
-                <ul>
-                    <% run.comments.forEach(function(comment) { %>
-                        <li>
-                            <div class="comment-item">
-                                <%= comment.text %>
-                                <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="delete-button">Delete Comment</button>
-                                </form>
-                            </div>
-                        </li>
-                    <% }); %>
-                </ul>
+                <form action="/runs/<%= run.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete-button">X</button>
+                </form>
+                <a href="/runs/<%= run._id %>">
+                    <%= run.title %>
+                </a>
             </li>
         <% }); %>
     </ul>
-</ul>
 
 <%- include('../partials/footer') %>
