@@ -1,16 +1,12 @@
 <%- include('../partials/header') %>
 
 <h3>
-    <%= music.song %>
+    <div> SONG: <%= music.song %>
 </h3>
 
 <section id="show-page">
-    <div>Song:</div>
-    <div><%= music.song %></div>
-    <div>Artist:</div>
-    <div><%= music.artist %></div>
-    <div>Genre:</div>
-    <div><%= music.genre %></div>
+    <h4>Artist: <%= music.artist %></h4>
+    <h4>Genre: <%= music.genre %></h4>
 </section>
 
 <a href="/music/<%= music.id %>/edit">Edit</a>
