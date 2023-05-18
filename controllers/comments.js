@@ -1,4 +1,4 @@
-const Run = require('../models/run');
+const Run = require('../models/run'); 
 
 module.exports = {
   create,
@@ -10,7 +10,7 @@ async function deleteComment(req, res) {
   // Note the cool "dot" syntax to query on the property of a subdoc
   const run = await Run.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
   // Rogue user!
-  if (!movie) return res.redirect('/runs');
+  if (!run) return res.redirect('/runs');
   // Remove the comment using the remove method available on Mongoose arrays
   run.comments.remove(req.params.id);
   // Save the updated run doc
