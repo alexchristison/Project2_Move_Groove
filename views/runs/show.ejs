@@ -62,7 +62,10 @@
           <td><%= r.rating %></td>
           <td>
             <% if (user?._id.equals(r.user)) { %>
-              <button class="delete-button" data-comment-id="<%= r._id %>">Delete</button>
+              <form action="/comments/<%= r._id %>?_method=DELETE" method="POST">
+                <button class="delete-button" data-comment-id="<%= r._id %>">Delete</button>
+                <!-- <button type="submit">X</button> -->
+              </form>
             <% } %>
           </td>
         </tr>

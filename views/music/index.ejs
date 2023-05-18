@@ -2,18 +2,29 @@
 
 <h2>Music</h2>
 
-<a href="/music/new">Add Some Music</a>
+<!-- <button type="button" onclick="window.location.href='/music/new'">Add Some Music</button> -->
+<button type="button" onclick="window.location.href='/music/new'" class="add-music-button">Add Some Music</button>
+<!-- <a href="/music/new">Add Some Music</a> -->
+
 
 <ul>
     <% music.forEach(function(music) { %>
         <li>
+            <a href="/music/<%= music._id %>">
+                <%= music.song %>
+            </a>
             <form action="/music/<%= music.id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button type="submit" class="delete-button">x</button>
+            </form> 
+        </li>
+        <!-- <li>
+            <form action="/music/<%= music.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="delete-button">X</button>
             </form> 
             <a href="/music/<%= music._id %>">
                 <%= music.song %>
             </a>
-        </li>
+        </li> -->
         <% }); %>
 </ul>
 
