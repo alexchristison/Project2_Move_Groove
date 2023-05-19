@@ -136,10 +136,12 @@ button.delete-button:hover {
 p {
   font-size: 24px;
   font-family: groovy;
+  margin-left: 10px;
 }
 
-h4 {
+h5 {
   font-family: groovy;
+  margin-left: 5px;
 }
 
 
