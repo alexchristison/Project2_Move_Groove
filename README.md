@@ -1,9 +1,9 @@
 # RUNS + MUSIC (Aka, Moove & Groove)
 
-### The purpose of my webapp is to allow users to input a run they did, and the original intent was that once that run was entered they could then enter music they listend to on the run. However, as the app development evolved the music component became slightly more ancillary. One pivot that resulted was the inclusion of the user being able to add comments to a run. In the end I had to remind myself to keep things small and focused on the MVP – feature creep can doom a project, but in the next steps section I'll address items I'll add later, or would have attempted given more time. 
+#### The purpose of my webapp is to allow users to input a run they did, and the original intent was that once that run was entered they could then enter music they listend to on the run. However, as the app development evolved the music component became slightly more ancillary. One pivot that resulted was the inclusion of the user being able to add comments to a run. In the end I had to remind myself to keep things small and focused on the MVP – feature creep can doom a project, but in the next steps section I'll address items I'll add later, or would have attempted given more time. 
 
 
-### The idea for this webapp came about due to the fact I enjoy running and listening to music on my runs. In fact, I have a spreadsheet with every run I've done since July 11, 2006. When I did GA's Product Management Immersive in early 2015 I envision creating a webapp like this someday, and eight years later it's coming to pass. 
+#### The idea for this webapp came about due to the fact I enjoy running and listening to music on my runs. In fact, I have a spreadsheet with every run I've done since July 11, 2006. When I did GA's Product Management Immersive in early 2015 I envision creating a webapp like this someday, and eight years later it's coming to pass. 
 
 ## SCREEN SHOTS:
 - LANDING PAGE:
@@ -18,7 +18,12 @@
 ![Image-6](https://i.imgur.com/Tpc2dyp.png)
 
 ## TECHNOLOGIES USED
-- 
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Mongoose
+- Express
 
 ## GETTING STARTED
 - Deployed App: https://moveandgroove.fly.dev/
