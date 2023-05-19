@@ -4,9 +4,20 @@
 
 ### The idea for this webapp came about due to the fact I enjoy running and listening to music on my runs. In fact, I have a spreadsheet with every run I've done since July 11, 2006. When I did GA's Product Management Immersive in early 2015 I envision creating a webapp like this someday, and eight years later it's coming to pass. 
 
-#### USER STORIES:
-##### As a user I want ...
-- to login to the app, so that I can enter a run
+#### SCREEN SHOTS:
+- LANDING PAGE:
+![Image-2](https://i.imgur.com/8gHUAsI.png)
+- ANOTHER PAGE: 
+![Image-3](https://i.imgur.com/qfCmJOm.png)
+- AND ANOTHER PAGE: 
+![Image-4](https://i.imgur.com/mURooyj.png)
+- YET ANOTHER PAGE:
+![Image-5](https://i.imgur.com/L7OXySU.png)
+- ONE LAST PAGE: 
+![Image-6](https://i.imgur.com/Tpc2dyp.png)
+
+
+
 - to be able to log out of the app
 - to enter a run, so that I can keep track of my run (see detail in card for entry fields)
 - to be able to edit a run I entered, so that I can fix mistakes as needed
