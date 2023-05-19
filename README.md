@@ -34,20 +34,16 @@
 
 Below three images show immediate next steps (the first and second images I feel were met in the current app, and the third is the music rendering in the run page which I'm pretty close to getting, but it was that, or neglecting any CSS)
 
-the new run is rendered: 
+the new run is rendered - only thing we don't currently have is pace: 
 
 ![Image-2](https://i.imgur.com/BNAU1wi.png)
 
-form to add new music as sub-element of a run: 
+form to add new music as sub-element of a run - album field would be next, so we can ultimately pull in album artwork: 
 
 ![Image-3](https://i.imgur.com/Tn3fOP5.png)
 
-run image rendered w/ music included
+run image rendered w/ music included - this is actually uderway as mentioned: 
 
 ![Image-4](https://i.imgur.com/zGEWhl8.png)
 
-full link to Balsamic wires: https://balsamiq.cloud/sjh802t/ppd0jux/r03D8
-
-#### Preliminary ERD: 
-
-![Image-ERD](https://i.imgur.com/C5r4JSK.png)
+full link to original Balsamic wires: https://balsamiq.cloud/sjh802t/ppd0jux/r03D8
