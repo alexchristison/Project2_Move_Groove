@@ -7,13 +7,13 @@
 #### SCREEN SHOTS:
 - LANDING PAGE:
 ![Image-2](https://i.imgur.com/8gHUAsI.png)
-- ANOTHER PAGE: 
+- On this page you can see runs a user has entered. You can delete any of them, or add a new one. You can click into the details of a run, or in the header click over into the music entry section: 
 ![Image-3](https://i.imgur.com/qfCmJOm.png)
-- AND ANOTHER PAGE: 
+- This is the detail page of a run. You can see the title of the run, the distance, the duration, and the location. You can click to edit the run. You can also view any comments on the run which you can delete, and if there aren't any add one. This also displays the user who enterd the comment. Runs have a one to many relationship with comments. 
 ![Image-4](https://i.imgur.com/mURooyj.png)
-- YET ANOTHER PAGE:
+- Here's the music page. You can view music by song title and either click to add, delete music, or go into music detail page. 
 ![Image-5](https://i.imgur.com/L7OXySU.png)
-- ONE LAST PAGE: 
+- This shows the edit view of a run page - any of the fields can be edited, or just left blank. It's worth noting that the music edit page is similar to this too. 
 ![Image-6](https://i.imgur.com/Tpc2dyp.png)
 
 
