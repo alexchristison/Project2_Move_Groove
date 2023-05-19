@@ -2,20 +2,34 @@
 
 <h2>Runs</h2>
 
-<a href="/runs/new">Add a Run</a>
+<button type="button" onclick="window.location.href='/runs/new'" class="add-run-button">Add a Run</button>
+<!-- <button type="button" onclick="window.location.href='/run/new'" class="add-run-button">Add a Run</button> -->
+<!-- <a href="/runs/new">Add a Run</a> -->
 
-<ul>
-    <ul>
-        <% runs.forEach(function(run) { %>
-            <li>
-                <form action="/runs/<%= run.id %>?_method=DELETE" method="POST">
-                    <button type="submit" class="delete-button">X</button>
-                </form>
-                <a href="/runs/<%= run._id %>">
-                    <%= run.title %>
-                </a>
-            </li>
+<ul class="running-list">
+    <% runs.forEach(function(run) { %>
+        <li>
+            <a href="/runs/<%= run._id %>">
+                <%= run.title %>
+            </a>
+            <form action="/runs/<%= run.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="delete-button">X</button>
+            </form>
+        </li>
         <% }); %>
-    </ul>
+</ul>
+
+<!-- <ul>
+    <% runs.forEach(function(run) { %>
+        <li>
+            <a href="/runs/<%= run._id %>">
+                <%= run.title %>
+            </a>
+            <form action="/runs/<%= run.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="delete-button">X</button>
+            </form>
+        </li>
+        <% }); %>
+</ul> -->
 
 <%- include('../partials/footer') %>

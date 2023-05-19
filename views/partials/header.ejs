@@ -27,9 +27,12 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <% if (user) { %>
-                        <a class="nav-link" href="/logout">Log Out</a>
                         <a class="nav-link" href="/runs">Runs</a>
                         <a class="nav-link" href="/music">Music</a>
+                        <!-- <a class="nav-link" href="/logout">Log Out</a> -->
+                        <a class="nav-link" href="/logout">
+                            <img class="logout-icon" src="https://i.imgur.com/jw6Ow0e.png" alt="Logout" style="width: 30px; height: 30px;"> Log Out
+                        </a>  
                     <% } else { %>
                         <a class="nav-link" href="/auth/google">
                             <img class="google-logo" src="https://i.imgur.com/jw6Ow0e.png" alt="Google OAuth">Log In

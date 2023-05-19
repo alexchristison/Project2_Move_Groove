@@ -14,8 +14,9 @@ header {
 }
 
 .navbar-brand {
+  font-family: 'YourGroovyFont', groovy;
   color: #d01414;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -46,6 +47,24 @@ header {
 }
 
 /* Body Styling */
+
+h2 {
+  color: rgb(116, 4, 56);
+  font-family: 'YourGroovyFont', groovy; /* Apply a groovy font */
+  text-align: left; /* Center align the text */
+  margin-left: 10px;
+  margin-top: 10px; /* Add some top margin */
+}
+
+h3 {
+  color: rgb(117, 5, 57);
+  font-family: 'YourGroovyFont', groovy; /* Apply a groovy font */
+  text-align: left; /* Center align the text */
+  margin-left: 30px;
+  margin-top: 10px; /* Add some top margin */
+}
+
+
 body {
   background-color: #abbbd4;
   font-family: Arial, sans-serif;
@@ -73,4 +92,46 @@ button.delete-button:hover {
     border-radius: 20px;
     cursor: pointer;
 }
+
+.add-run-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.music-list {
+  list-style-type: none; /* Remove default bullet points */
+}
+
+.music-list li:before {
+  content: "♪"; /* Unicode musical note character */
+  /* Or use a custom image as the bullet:
+  content: "";
+  background-image: url('path/to/musical-note.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  */
+  margin-right: 5px; /* Adjust spacing between the bullet and text */
+  font-size: 1.5em;
+}
+
+.running-list {
+  list-style: none;
+}
+
+
+.running-list li::before {
+  content: "🏃‍♀️"; /* 🏃‍♀️ emoji */
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+
+
 
