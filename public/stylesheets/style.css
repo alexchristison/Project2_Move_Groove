@@ -133,5 +133,16 @@ button.delete-button:hover {
   font-size: 1.5em;
 }
 
+p {
+  font-size: 24px;
+  font-family: groovy;
+}
+
+h4 {
+  font-family: groovy;
+}
+
+
+
 
 

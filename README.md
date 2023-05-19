@@ -1,6 +1,8 @@
 # RUNS + MUSIC (Aka, Moove & Groove)
 
-### The purpose of the webapp is to allow users to input a run they did, and once that is entered they can enter music they listend to on the run. 
+### The purpose of my webapp is to allow users to input a run they did, and the original intent was that once that run was entered they could then enter music they listend to on the run. However, as the app development evolved the music component became slightly more ancillary. One pivot that resulted was the inclusion of the user being able to add comments to a run. 
+
+### The idea for this webapp came about due to the fact I enjoy running and listening to music on my runs. In fact, I have a spreadsheet with every run I've done since July 11, 2006. When I did GA's Product Management Immersive in early 2015 I envision creating a webapp like this someday, and eight years later it's coming to pass. 
 
 #### USER STORIES:
 ##### As a user I want ...
